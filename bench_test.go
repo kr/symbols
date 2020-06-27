@@ -30,7 +30,7 @@ func BenchmarkMakeSame(b *testing.B) {
 		b.ResetTimer()
 
 		for i := 0; i < b.N; i++ {
-			// Make just a Symbol (using a new string for the sane.
+			// Make just a Symbol (using a preallocated string).
 			Make(names[i])
 		}
 	})
@@ -50,7 +50,7 @@ func BenchmarkMakeDiff(b *testing.B) {
 		b.ResetTimer()
 
 		for i := 0; i < b.N; i++ {
-			// Make just a Symbol (using a new string for the sane.
+			// Make just a Symbol (using a preallocated string).
 			Make(names[i])
 		}
 	})
